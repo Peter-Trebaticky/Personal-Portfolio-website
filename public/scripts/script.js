@@ -1,5 +1,9 @@
+///fade effect
+$('.fadeelement')
+  .hide()
+  .fadeIn(2500);
 
-
+///language/image change
 document.addEventListener('DOMContentLoaded', function() {
   var languageTextElements = document.querySelectorAll('.language-text');
 
@@ -24,28 +28,17 @@ function changeLanguage() {
   });
 }
 
-
-
-
-
-// Presunúť na sekciu "home" po načítaní stránky
+// refresh 
 //window.addEventListener("load", function () {
 //  document.documentElement.scrollTop = document.body.scrollTop = document.getElementById("home").offsetTop;
 //});
 
-
-
-
-
-// Get the button
+// back to top
 let mybutton = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
     scrollFunction();
 };
 mybutton.style.display = "none";
-
 function scrollFunction() {
     if (
         document.body.scrollTop > 100 ||
@@ -56,7 +49,6 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-// When the user clicks on the button, scroll to the top of the document
 mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
@@ -64,29 +56,32 @@ function backToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-
-
-
-
-
-/* Set the width of the sidebar to 250px (show it) */
+/// sidebar
 function openNav() {
     document.getElementById("mySidepanel").style.width = "100%";
 }
 
-/* Set the width of the sidebar to 0 (hide it) */
+
 function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
 
+//water effect
+$(document).ready(function () {
+  function checkScreenSize() {
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      $(".water").ripples("destroy");
+    } else {
+      $(".water").ripples({
+        resolution: 1400,
+        perturbance: 0.040,
+      });
+    }
+  }
+ checkScreenSize();
 
-
-
-
-/**water effect */
-$(document).ready(function(){
-	    $(".full-landing-image").ripples({
-        resolution: 400,
-        perturbance: .008,
-    });
+  $(window).resize(checkScreenSize); 
 });
+
+//parallax effect
+
