@@ -564,6 +564,10 @@ video {
   position: absolute;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .bottom-5 {
   bottom: 1.25rem;
 }
@@ -574,10 +578,6 @@ video {
 
 .top-0 {
   top: 0px;
-}
-
-.z-0 {
-  z-index: 0;
 }
 
 .z-10 {
@@ -629,9 +629,9 @@ video {
   margin-right: auto;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .mb-10 {
@@ -652,6 +652,14 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.ml-32 {
+  margin-left: 8rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .ml-9 {
@@ -718,8 +726,8 @@ video {
   height: 1rem;
 }
 
-.h-auto {
-  height: auto;
+.h-4\/6 {
+  height: 66.666667%;
 }
 
 .h-max {
@@ -744,6 +752,10 @@ video {
   width: 91.666667%;
 }
 
+.w-2\/6 {
+  width: 33.333333%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -752,13 +764,16 @@ video {
   width: 13rem;
 }
 
-.w-full {
-  width: 100%;
+.w-80 {
+  width: 20rem;
 }
 
-.w-min {
-  width: -moz-min-content;
-  width: min-content;
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-lg {
@@ -767,6 +782,14 @@ video {
 
 .max-w-screen-md {
   max-width: 768px;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.resize {
+  resize: both;
 }
 
 .scroll-mt-0 {
@@ -799,6 +822,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-8 {
@@ -887,10 +914,6 @@ video {
   padding: 0.75rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -928,9 +951,9 @@ video {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-5xl {
@@ -960,6 +983,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .font-light {
@@ -995,6 +1022,11 @@ video {
 .text-primaryColor {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.text-sky-200 {
+  --tw-text-opacity: 1;
+  color: rgb(186 230 253 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1042,7 +1074,7 @@ video {
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Julius Sans One', sans-serif ;
 }
 
 .topnav {
@@ -1062,11 +1094,10 @@ body {
 }
 
 .image-button {
-  display: inline-block;
   width: 60px;
   height: 34px;
   border-radius: 25px;
-  background-image: url('../img/britany.png');
+  background-image: url('../img/english-image.png');
   background-size: cover;
   background-position: center;
   border: 2px #000;
@@ -1074,34 +1105,17 @@ body {
 }
 
 .image-button.clicked {
-  background-image: url('../img/slovakia.png');
+  background-image: url('../img/slovak-image.png');
 }
 
-/*.text {
-    /*position: absolute;
-    top: 40%;
-    right: 30%;
-    transform: translate(50%, -50%);*
-    text-transform: uppercase;
-    font-family: verdana;
-    /*font-size: 3em;
-    font-weight: 700;*
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 5px 1px #919191,
-        1px 2px 1px #919191,
-        1px 2px 1px #919191,
-        1px 1px 1px #919191,
-        1px 18px 6px rgba(16, 16, 16, 0.4),
-        1px 22px 10px rgba(16, 16, 16, 0.2),
-        1px 25px 35px rgba(16, 16, 16, 0.2),
-        1px 30px 60px rgba(16, 16, 16, 0.4);
-}*/
+h1{
+  font-family: 'Sirin Stencil', cursive;
+}
+
+.header-text{
+  font-family: 'Audiowide', cursive;
+  text-shadow: 9px 9px 2px rgba(0, 0, 0, 0.5);
+}
 
 /* The sidepanel menu */
 
@@ -1113,6 +1127,7 @@ body {
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  background-image: url('../img/water.jpg');
 }
 
 /* The sidepanel links */
@@ -1126,6 +1141,20 @@ body {
 
 /* Position and style the close button (top right corner) */
 
+.nav-panel{
+  width: 100%;
+  background-size:auto ;
+  background-image: url('../img/water.jpg') ;
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  top: 0;
+  left: 0;
+}
+
+.fadeelement{
+  z-index: 0
+}
+
 .sidepanel .closebtn {
   top: 0;
   right: 16px;
@@ -1137,9 +1166,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url('../img/water.jpg') ;
-  background-size: cover;
-  -o-object-position: center;
-     object-position: center;
+  background-size: auto;
   top: 0;
   left: 0;
 }
@@ -1154,45 +1181,25 @@ body {
   left: 0;
   height: 100vh;
   background-repeat: no-repeat;
-  background-position: center;
-  /*animation: parallax-layer1 50s linear infinite;*/
+  background-position: left;
+  background-image: url("../img/bubbles1.png");
   opacity: 0.3;
-  /* Rýchlosť animácie */
 }
-
-/*
-@keyframes parallax-layer1 {
-    0% {
-        transform: translateY(0);
-    }
-    
-    100% {
-        transform: translateY(-300vh);
-
-    }
-}
-*/
 
 .parallax-layer2 {
   top: 0;
   right: 0;
   height: 100vh;
   background-repeat: no-repeat;
-  /*animation: parallax-layer2 60s linear infinite;*/
+  background-position: right;
+  background-image: url("../img/bubbles.png");
   opacity: 0.3;
-  /* Rýchlosť animácie */
 }
 
-/*@keyframes parallax-layer2 {
-    0% {
-        transform: translateY(0);
-    }
+/*
 
-    100% {
-        transform: translateY(-800vh);
 
-    }
-}
+
 */
 
 .container{
@@ -1206,9 +1213,6 @@ body {
 
 /*scoial icons*/
 
-/* Let's style the wrapper in such away that, 
-it should always be at the center of the browser */
-
 .wrapper {
   width: 550px;
 }
@@ -1216,10 +1220,6 @@ it should always be at the center of the browser */
 .wrapper ul {
   list-style: none;
 }
-
-/* Style the list items inside the UL list, by setting its width, height and line-height 
-  and float them to left and set its border and border-radius.
- */
 
 .wrapper ul li {
   width: 75px;
@@ -1234,19 +1234,11 @@ it should always be at the center of the browser */
   transition: all 0.5s ease;
 }
 
-/* Style the icons by setting its color and margin-top value to 20px 
-to align it properly */
-
 .wrapper ul li .fa {
   color: #D8E2DC;
   margin-top: 20px;
   transition: all 0.5s ease;
 }
-
-/* Now target the specific li classes for styling and use box-shadow effect to border and text-shadow effect
-  to icons for glowing effect and use transition property for smooth transition effect. */
-
-/*facebook*/
 
 .fa-linkedin, .fa-github, .fa-facebook, .fa-envelope, .fa-phone{
   color: #D8E2DC;
@@ -1331,6 +1323,12 @@ to align it properly */
 
 /* media queries */
 
+@media screen and (max-width: 768px){
+  .nav-panel{
+    background-image: none;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .wrapper {
     width: 285px;
@@ -1364,11 +1362,6 @@ to align it properly */
 .hover\:bg-red-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.hover\:text-cyan-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 78 99 / var(--tw-text-opacity));
 }
 
 .hover\:text-cyan-950:hover {
@@ -1478,14 +1471,6 @@ to align it properly */
     position: relative;
   }
 
-  .md\:left-16 {
-    left: 4rem;
-  }
-
-  .md\:top-56 {
-    top: 14rem;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -1500,8 +1485,12 @@ to align it properly */
     margin-bottom: 3.5rem;
   }
 
-  .md\:mr-0 {
-    margin-right: 0px;
+  .md\:ml-16 {
+    margin-left: 4rem;
+  }
+
+  .md\:ml-48 {
+    margin-left: 12rem;
   }
 
   .md\:flex {
@@ -1516,22 +1505,48 @@ to align it properly */
     width: 50%;
   }
 
+  .md\:w-7\/12 {
+    width: 58.333333%;
+  }
+
   .md\:w-96 {
     width: 24rem;
   }
 
-  .md\:flex-row {
-    flex-direction: row;
+  .md\:border-b-2 {
+    border-bottom-width: 2px;
   }
 
   .md\:bg-left-bottom {
     background-position: left bottom;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 }
 
 @media (min-width: 1024px) {
   .lg\:mb-16 {
     margin-bottom: 4rem;
+  }
+
+  .lg\:ml-96 {
+    margin-left: 24rem;
+  }
+
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:py-16 {
@@ -1545,4 +1560,5 @@ to align it properly */
     width: 66.666667%;
   }
 }
+
 

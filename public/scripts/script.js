@@ -69,7 +69,7 @@ function closeNav() {
 //water effect
 $(document).ready(function () {
   function checkScreenSize() {
-    if (window.matchMedia("(max-width: 600px)").matches) {
+    if (window.matchMedia("(max-width: 768px)").matches) {
       $(".water").ripples("destroy");
     } else {
       $(".water").ripples({
@@ -84,4 +84,3 @@ $(document).ready(function () {
 });
 
 //parallax effect
-

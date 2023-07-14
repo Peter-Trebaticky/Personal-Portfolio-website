@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Julius+Sans+One&family=Sirin+Stencil&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
@@ -16,76 +22,81 @@
 
 </head>
 
-<body class="full-landing-image" >
+<body class="full-landing-image water" >
     
-    <main >
+    <main class="">
         <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="z-50 inline-block fixed hover:animate-bounce p-3 bg-red-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-red-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
             <svg focusable="false" data-prefix="fas" class="w-4 h-4 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
         </button>
 
 
+        <header class=" nav-panel h-16 top-0 z-40 md:border-b-2 text-primaryColor sticky">
+                <button class="z-50 image-button m-3.5 float-left inline-block absolute opacity-70 hover:opacity-100" onclick="changeLanguage()"></button>
+
+                <div class=" justify-center hidden md:flex">
+                    <nav class=" mt-4 text-xl font-bold" >
+                        <a href="#home" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='DOMOV' data-en='HOME'></a>
+                        <a href="#about" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='O MNE' data-en='ABOUT ME'></a>
+                        <a href="#myWork" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='MOJA PRÁCA' data-en='MY WORK' ></a>
+                        <a href="#contact" class="language-text link-underline hover:text-cyan-950" data-sk='KONTAKT' data-en='CONTACT'></a>
+                    </nav>
+                </div>
+                <div id="mySidepanel" class="sidepanel  min-h-screen z-20 text-center font-bold">
+                    <button class="openbtn closebtn  md:hidden float-right absolute mt-1 text-5xl hover:text-cyan-950" onclick="closeNav()">&#9776;</button>
+                    <a href="#home" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='DOMOV' data-en='HOME'></a>
+                    <a href="#about" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='O MNE' data-en='ABOUT ME'></a>
+                    <a href="#myWork" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='MOJA PRÁCA' data-en='MY WORK'></a>
+                    <a href="#contact"onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='KONTAKT' data-en='CONTACT'></a>
+                    <div class="wrapper flex  mx-auto place-content-center">
+                        <ul class="">
+                            <li class="linkedin"><a href="https://www.linkedin.com/in/peter-trebaticky/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
+                            <li class="github"><a href="https://github.com/Peter-Trebaticky"><i class="fa-brands fa-github fa-2x"></i></a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/peter.trebaticky/"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                            <li class="email"><a href="mailto:trebatickysk@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
+                            <li class="phone"><a href="tel:+421918885987"><i class="fa-solid fa-phone fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <button class="openbtn  md:hidden float-right mr-4 mt-1 text-5xl hover:text-cyan-950" onclick="openNav()" >&#9776;</button>
+        </header>
         
         
         <section id="home" class=" grid bg-opacity-50  min-h-screen bg-cover w-full bg-center md:bg-left-bottom bg-no-repeat backdrop-opacity-50 ">
-            <header class=" h-16 top-0 z-40 border-b-2 text-primaryColor">
-                    <button class="z-50 image-button m-3.5 float-left absolute opacity-70 hover:opacity-100" onclick="changeLanguage()"></button>
-    
-                    <div class=" justify-center hidden md:flex">
-                        <nav class=" mt-4 text-xl font-bold" >
-                            <a href="#home" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='DOMOV' data-en='HOME'></a>
-                            <a href="#about" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='O MNE' data-en='ABOUT ME'></a>
-                            <a href="#myWork" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='MOJA PRÁCA' data-en='MY WORK' ></a>
-                            <a href="#contact" class="language-text link-underline hover:text-cyan-950" data-sk='KONTAKT' data-en='CONTACT'></a>
-                        </nav>
-                    </div>
-                    <div id="mySidepanel" class="sidepanel  min-h-screen z-20 text-center font-bold">
-                        <button class="openbtn closebtn  md:hidden float-right absolute mt-1 text-5xl hover:text-cyan-950" onclick="closeNav()">&#9776;</button>
-                        <a href="#home" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='DOMOV' data-en='HOME'></a>
-                        <a href="#about" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='O MNE' data-en='ABOUT ME'></a>
-                        <a href="#myWork" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='MOJA PRÁCA' data-en='MY WORK'></a>
-                        <a href="#contact"onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='KONTAKT' data-en='CONTACT'></a>
-                        <div class="wrapper flex  mx-auto place-content-center">
-                            <ul class="">
-                                <li class="linkedin"><a href="https://www.linkedin.com/in/peter-trebaticky/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-                                <li class="github"><a href="https://github.com/Peter-Trebaticky"><i class="fa-brands fa-github fa-2x"></i></a></li>
-                                <li class="facebook"><a href="https://www.facebook.com/peter.trebaticky/"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                                <li class="email"><a href="mailto:trebatickysk@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
-                                <li class="phone"><a href="tel:+421918885987"><i class="fa-solid fa-phone fa-2x"></i></a></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <button class="openbtn  md:hidden float-right mr-4 mt-1 text-5xl hover:text-cyan-950" onclick="openNav()" >&#9776;</button>
-    
-            </header>
              
-            <div class="text-center  mx-auto my-auto w-min">
-                <h1 class="text p-4  text-4xl"></h1>
+            <div class="fadeelement mx-auto my-32 w-80 lg:w-9/12 md:w-7/12 text-primaryColor z-10">
+                <h1 class="language-text text-2xl md:text-4xl ml-5 md:ml-16 " data-sk='Ahoj, som' data-en='Hello, I am'></h1>
+                <h1 class="header-text text-5xl md:text-7xl font-extrabold text-sky-200">Peter Trebatický</h1>
+                <h1 class="text-2xl md:text-4xl ml-32 md:ml-48 lg:ml-96">web developer</h1>
             </div>
         </section>
 
 
-        <div class="parallax-layer1 z-10">
-            <img src="img/bubbles1.png" alt="Bubbles">
+        <div id="one" class="parallax-layer1 ">
         </div>
-        <section id="about" class="grid h-auto scroll-mt-12 mb-56">
-            <h1 class="language-text text-center font-bold text-5xl h-min text-primaryColor" data-sk='NIEČO O MNE' data-en='ABOUT ME'></h1>
-            <article class="flex flex-col md:flex-row justify-center z-10 w-11/12 mx-auto">
-                <div class="container md:relative md:left-16 mr-10 md:mr-0 md:mb-14 mt-40 w-full rounded-xl bg-sky-950 z-30">
+        <section id="about" class="grid scroll-mt-12 mb-56">
+            <h1 class="language-text text-center font-bold text-5xl h-min text-primaryColor" data-sk='O MNE' data-en='ABOUT ME'></h1>
+            <article class="flex flex-col lg:flex-row justify-between mt-40 z-10 w-10/12 mx-auto">
+                <div class="container md:relative mr-10 w-2/6 flex-shrink-0  rounded-xl bg-sky-950 z-30">
                     <p class="language-text text-primaryColor m-6 text-center text-lg font-serif"
-                        data-sk='Volám sa Peter Trebatický a som začínajúci programátor. Od detstva som sa venoval počítačom a stále viac ma zaujímali princípy 
+                        data-sk='Volám sa Peter a som začínajúci programátor. Od detstva som sa venoval počítačom a stále viac ma zaujímali princípy 
                     fungovania programov, hier a webových stránok. Život ma viedol inou cestou. Ale počas práce v OSSR som sa začal zaujímať o programovanie 
                     hlbšie, pochopiteľne, ako väčšina začínajúcich som išiel od HTML, CSS, JS a tvorby webových stránok. Čo bolo najprv hobby ma pohltilo naplno, 
                     zaplatil som si kurzy a rôzne spôsoby vzdelávania, rozhodol som sa, že sa chcem živiť tým čo ma baví. V súčasnosti hľadám svoje uplatnenie v IT 
                     sektore aby som sa mohol ďalej vzdelávať, koniec koncov to ma najviac baví učiť sa neustále nove veci a tvoriť niečo zaujímavé.'
-                        data-en='My name is Peter Trebatický and I am a beginner programmer. I have been involved with computers since childhood and I was increasingly 
+                        data-en='My name is Peter and I am a beginner programmer. I have been involved with computers since childhood and I was increasingly 
                     interested in the principles of how programs, games and websites work. Life took me on a different path. But while working at Armed Forces, I became interested 
                     in programming more deeply, understandably, like most beginners, I went from HTML, CSS, JS and creating websites. What was at first a hobby absorbed me 
                     completely, I paid for courses and various methods of education, I decided that I want to make a living doing what I enjoy. I am currently looking for 
                     a job in the IT sector so that I can further my education, after all, I enjoy learning new things all the time and creating something interesting.'>
                     </p>
                 </div>
-                <div class="container md:relative md:top-56 grid  md:mb-14 mt-40 w-full  rounded-xl bg-sky-950 z-20">
+                <div class="container md:relative w-2/6 flex-shrink-0 mr-10 rounded-xl bg-sky-950 z-20">
+                    <figure class="w-auto h-4/6 ml-9 flex justify-center">
+                        <img src="./img/photo.png" alt="">
+                    </figure>
+                </div>
+                <div class="container md:relative w-2/6 flex-shrink-0 md:mb-14 rounded-xl bg-sky-950 z-20">
                     <figure class="w-10/12 ml-9 flex justify-center">
                     
                     </figure>
@@ -131,17 +142,26 @@
                         </p>
                     </div>
                 </div>
+                <div class="mx-auto grid max-w-lg py-20 min-w-1/2 border-b-2">
+                    <img src="img/web02.png" alt="">
+                    <div class="w-10/12 mx-auto text-primaryColor z-20 ">
+                        <h2 class="font-bold text-xl pb-8">Vals studio</h2>
+                        <p class="language-text"
+                            data-sk='Fungujúca web stránka, ktorá slúži, ako prezentácia kozmetického štúdia. Jeden z prvých projektov, ktorý som robil podla predstav klienta.'
+                            data-en="A working website that serves as a presentation of a cosmetic studio. One of the first projects I did according to the client's ideas.">
+                        </p>
+                    </div>
+                </div>
             </article>
 
             
             
             
         </section>
-        <div class="parallax-layer2 z-0">
-            <img src="img/bubbles.png" alt="More Bubbles">
+        <div id="two" class="parallax-layer2 ">
         </div>
         <section id="contact" class=" min-h-screen mb-10 scroll-mt-8">
-            <h2 class="mb-4 text-5xl tracking-tight font-bold text-center text-primaryColor language-text" data-sk='KONTAKT' data-en='CONTACT'></h2>
+            <h1 class="mb-4 text-5xl tracking-tight font-bold text-center text-primaryColor language-text" data-sk='KONTAKT' data-en='CONTACT'></h2>
             <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl language-text" 
                 data-sk='Ak som vás zaujal prosím kontaktujte ma.' 
                 data-en='If I have interested you, please contact me.'>
