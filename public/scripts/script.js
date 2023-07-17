@@ -84,3 +84,27 @@ $(document).ready(function () {
 });
 
 //parallax effect
+
+
+//progress bar
+function fillProgressBar(progressBar) {
+  var progressFill = progressBar.querySelector(".progress");
+  var fillAmount = progressBar.dataset.fill;
+
+  progressFill.style.width = fillAmount + "%";
+}
+
+function handleScroll() {
+  var progressBars = document.querySelectorAll(".progress-bar");
+
+  progressBars.forEach(function (progressBar) {
+    var progressBarPosition = progressBar.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (progressBarPosition < windowHeight) {
+      fillProgressBar(progressBar);
+    }
+  });
+}
+
+window.addEventListener("scroll", handleScroll);
