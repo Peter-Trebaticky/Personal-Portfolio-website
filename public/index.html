@@ -8,10 +8,12 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/icons.css">
+
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Julius+Sans+One&family=Sirin+Stencil&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Julius+Sans+One&family=Montserrat+Alternates&family=Sirin+Stencil&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
@@ -24,16 +26,18 @@
 
 <body class="full-landing-image water" >
     
-    <main class="">
+    <main id="home" class="">
         <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" class="z-50 inline-block fixed hover:animate-bounce p-3 bg-red-800 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-600 hover:shadow-lg focus:bg-red-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
-            <svg focusable="false" data-prefix="fas" class="w-4 h-4 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+            <svg class="w-4 h-4">
+                <use xlink:href="./assets/icons.svg#icon-arrow"></use>
+            </svg>
         </button>
 
 
         <header class=" nav-panel h-16 top-0 z-40 md:border-b-2 text-primaryColor sticky">
                 <button class="z-50 image-button m-3.5 float-left inline-block absolute opacity-70 hover:opacity-100" onclick="changeLanguage()"></button>
 
-                <div class=" justify-center hidden md:flex">
+                <div class="jso-font justify-center hidden md:flex">
                     <nav class=" mt-4 text-xl font-bold" >
                         <a href="#home" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='DOMOV' data-en='HOME'></a>
                         <a href="#about" class="language-text link-underline mr-4 hover:text-cyan-950" data-sk='O MNE' data-en='ABOUT ME'></a>
@@ -41,7 +45,7 @@
                         <a href="#contact" class="language-text link-underline hover:text-cyan-950" data-sk='KONTAKT' data-en='CONTACT'></a>
                     </nav>
                 </div>
-                <div id="mySidepanel" class="sidepanel  min-h-screen z-20 text-center font-bold">
+                <div id="mySidepanel" class="jso-font sidepanel  min-h-screen z-20 text-center font-bold">
                     <button class="openbtn closebtn  md:hidden float-right absolute mt-1 text-5xl hover:text-cyan-950" onclick="closeNav()">&#9776;</button>
                     <a href="#home" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='DOMOV' data-en='HOME'></a>
                     <a href="#about" onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='O MNE' data-en='ABOUT ME'></a>
@@ -49,11 +53,11 @@
                     <a href="#contact"onclick="closeNav()" class="language-text nav-a hover:text-cyan-950" data-sk='KONTAKT' data-en='CONTACT'></a>
                     <div class="wrapper flex  mx-auto place-content-center">
                         <ul class="">
-                            <li class="linkedin"><a href="https://www.linkedin.com/in/peter-trebaticky/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-                            <li class="github"><a href="https://github.com/Peter-Trebaticky"><i class="fa-brands fa-github fa-2x"></i></a></li>
-                            <li class="facebook"><a href="https://www.facebook.com/peter.trebaticky/"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                            <li class="email"><a href="mailto:trebatickysk@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
-                            <li class="phone"><a href="tel:+421918885987"><i class="fa-solid fa-phone fa-2x"></i></a></li>
+                            <li class="linkedin"><a href="https://www.linkedin.com/in/peter-trebaticky/"><i class="fa-brands fa-linkedin fa-2x pt-4"></i></a></li>
+                            <li class="github"><a href="https://github.com/Peter-Trebaticky"><i class="fa-brands fa-github fa-2x pt-4"></i></a></li>
+                            <li class="facebook"><a href="https://www.facebook.com/peter.trebaticky/"><i class="fa-brands fa-facebook fa-2x pt-4"></i></a></li>
+                            <li class="email"><a href="mailto:trebatickysk@gmail.com"><i class="fa-solid fa-envelope fa-2x pt-4"></i></a></li>
+                            <li class="phone"><a href="tel:+421918885987"><i class="fa-solid fa-phone fa-2x pt-4"></i></a></li>
                         </ul>
                     </div>
                     
@@ -62,23 +66,30 @@
         </header>
         
         
-        <section id="home" class=" grid bg-opacity-50  min-h-screen bg-cover w-full bg-center md:bg-left-bottom bg-no-repeat backdrop-opacity-50 ">
-             
-            <div class="fadeelement mx-auto my-32 w-80 lg:w-9/12 md:w-7/12 text-primaryColor z-10">
+        <section class=" grid min-h-screen mx-auto w-11/12 xl:w-10/12 2xl:w-6/12">
+            <div class="fadeelement my-16 sm:my-32 lg:w-9/12 text-primaryColor z-10">
                 <h1 class="language-text text-2xl md:text-4xl ml-5 md:ml-16 " data-sk='Ahoj, som' data-en='Hello, I am'></h1>
                 <h1 class="header-text text-5xl md:text-7xl font-extrabold text-sky-200">Peter Trebatický</h1>
                 <h1 class="text-2xl md:text-4xl ml-32 md:ml-48 lg:ml-96">web developer</h1>
             </div>
+
+            <div class="mx-auto mr-0 float-right mb-32 bottom-0 relative h-min lg:w-auto rounded-2xl bg-sky-950 z-30">
+                <a class="relative flex float-right m-3" href="./assets/CV.pdf" download>
+                    <button class="water-button language-text" data-sk='Stiahnuť Životopis' data-en='Download CV'></button>
+                </a>
+                <div class="px-4 pb-3 text-md lg:text-xl font-bold">
+                    <p class="text-primaryColor text-start mt-20 mx-auto "><i class="fa-solid fa-code pr-2"></i>Junior Frontend Developer.</p>
+                    <p class="text-primaryColor text-start  mt-2 mx-auto"><i class="fa-solid fa-code pr-2"></i>Vždy hľadám nové spôsoby, ako sa zlepšiť.</p>
+                    <p class="text-primaryColor text-start  mt-2 mx-auto"><i class="fa-solid fa-code pr-2"></i>Som neustále otvorený novým skúsenostiam.</p>
+                </div>
+            </div>
         </section>
 
-
-        <!--<div id="one" class="parallax-layer1 ">
-        </div>-->
-        <section id="about" class="grid h-max scroll-mt-12 gap-40 mb-56">
+        <section id="about" class="grid h-max scroll-mt-12 lg:scroll-mt-20 gap-40 mb-56">
             <h1 class="language-text text-center font-bold text-5xl h-min text-primaryColor" data-sk='O MNE' data-en='ABOUT ME'></h1>
             <article class="grid  flex-col lg:grid-cols-2  mt-40 gap-40  z-10 px-5 mx-auto">
                 <div class="container md:relative flex-shrink-0 lg:w-auto rounded-xl bg-sky-950 z-30">
-                    <p class="language-text text-primaryColor m-6 text-center text-lg font-serif"
+                    <p class="language-text text-primaryColor m-6 text-center text-lg"
                         data-sk='Volám sa Peter a som začínajúci programátor. Od detstva som sa venoval počítačom a stále viac ma zaujímali princípy 
                     fungovania programov, hier a webových stránok. Život ma viedol inou cestou. Ale počas práce v OSSR som sa začal zaujímať o programovanie 
                     hlbšie, pochopiteľne, ako väčšina začínajúcich som išiel od HTML, CSS, JS a tvorby webových stránok. Čo bolo najprv hobby ma pohltilo naplno, 
@@ -100,13 +111,46 @@
                 
             </article>
             <article class="about-article grid w-full grid-cols-1 gap-40 px-5 mx-auto">    
-                <div class="rounded-xl bg-sky-950 z-20">
-                    <h2 class="text-primaryColor font-bold text-xl text-center mt-5 language-text" data-sk='Moje Hobby a vlastnosti' data-en='My hobbies and characteristics'></h2>
+                <div class="rounded-xl text-primaryColor bg-sky-950 z-20 ">
+                    <h2 class="jso-font font-bold text-xl text-center mt-5 language-text" data-sk='Moje vlastnosti a záujmy' data-en='My characteristics and hobbies'></h2>
+                    <div class="grid gap-6 text-xs sm:text-lg sm:gap-10 px-4 pt-10 mx-auto grid-cols-2 lg:grid-cols-4">
+                        <div class="mx-auto">
+                            <span class="icon icon-flexibility mx-auto block mb-2"></span>
+                            <p class="language-text" data-sk='Flexibilita' data-en='Flexibility'></p>
+                        </div>
+                        <div class="mx-auto">
+                            <span class="icon icon-responsibility mx-auto block mb-2"></span>
+                            <p class="language-text" data-sk='Zodpovednosť' data-en='Responsibility'></p>
+                        </div>
+                        <div class="mx-auto">
+                            <span class="icon icon-creativity mx-auto block mb-2"></span>
+                            <p class="language-text" data-sk='Vynaliezavosť' data-en='Ingenuity'></p>
+                        </div>
+                        <div class="mx-auto">
+                            <span class="icon icon-thinking mx-auto block mb-2"></span>
+                            <p class="language-text sm:ml-0" data-sk='Logické myslenie' data-en='Logical thinking'></p>
+                        </div>
+                    </div>
+                    <span class="w-10/12 mx-auto border-b-8 my-8 opacity-50 border-primaryColor rounded-full block"></span>
+                    <div class="grid px-4 text-xs sm:text-lg lg:px-28 gap-6 sm:gap-10 pb-10 grid-cols-2 lg:grid-cols-3">
+                        <div class="mx-auto">
+                            <span class="icon icon-diving mx-auto block mb-2"></span>
+                            <p class="language-text" data-sk='Potápanie' data-en='Scuba diving'></p>
+                        </div>
+                        <div class="mx-auto">
+                            <span class="icon icon-programming mx-auto block mb-2"></span>
+                            <p class="language-text" data-sk='Programovanie' data-en='Programming'></p>
+                        </div>
+                        <div class="mx-auto col-span-2 lg:col-span-1">
+                            <span class="icon icon-swim mx-auto block mb-2"></span>
+                            <p class="language-text" data-sk='Športovanie' data-en='Playing sports'></p>
+                        </div>
+                    </div>
                 </div>
-                    
+                
 
                 <div class=" text-primaryColor rounded-xl pb-10 lg:pb-0  bg-sky-950 z-30">
-                    <h2 class="text-primaryColor pb-8 font-bold text-xl text-center mt-5 language-text" data-sk='Znalosti' data-en='Knowledge'></h2>
+                    <h2 class="jso-font text-primaryColor pb-8 font-bold text-xl text-center mt-5 language-text" data-sk='Znalosti' data-en='Knowledge'></h2>
                     <div class="grid  gap-x-10 px-4 md:px-10 grid-cols-1 lg:grid-cols-2"> 
                         
                         <div class="grid h-min gap-y-5 "> 
@@ -114,35 +158,35 @@
                             <div id="myBar" data-fill="85" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7 h-min">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-html "></use>
+                                    <use xlink:href="./assets/icons.svg#icon-html "></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">HTML</p>
                             </div>
                             <div id="myBar" data-fill="80" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7 h-min">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-css"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-css"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">CSS</p>
                             </div>
                             <div id="myBar" data-fill="55" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7 h-min">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-javascript"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-javascript"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">JavaScript</p>
                             </div>
                             <div id="myBar" data-fill="40" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7 h-min">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-php"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-php"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">PHP</p>
                             </div>
                             <div id="myBar" data-fill="20" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7 h-min">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-python"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-python"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">Python</p>
                             </div>
@@ -153,21 +197,21 @@
                             <div id="myBar" data-fill="45" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-vue"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-vue"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">VUE.js</p>
                             </div>
                             <div id="myBar" data-fill="80" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-tailwind"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-tailwind"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">Tailwind</p>
                             </div>
                             <div id="myBar" data-fill="70" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-bootstrap"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-bootstrap"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">Bootstrap</p>
                             </div>
@@ -176,14 +220,14 @@
                             <div id="myBar" data-fill="70" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-jquery"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-jquery"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">jQuery</p>
                             </div>
                             <div id="myBar" data-fill="75" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-sass"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-sass"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">Sass(Scss)</p>
                             </div>
@@ -194,21 +238,21 @@
                             <div id="myBar" data-fill="80" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-git"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-git"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">Git</p>
                             </div>
                             <div id="myBar" data-fill="80" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-github"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-github"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">Github</p>
                             </div>
                             <div id="myBar" data-fill="90" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-vscode"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-vscode"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">VScode</p>
                             </div>
@@ -219,7 +263,7 @@
                             <div id="myBar" data-fill="30" class="progress-bar flex items-center shadow-lg shadow-black rounded-3xl pl-7">
                                 <div class="progress rounded-3xl"></div>
                                 <svg class="h-12">
-                                    <use xlink:href="./img/icons.svg#icon-mysql"></use>
+                                    <use xlink:href="./assets/icons.svg#icon-mysql"></use>
                                 </svg>
                                 <p class="ml-auto mr-10 lg:ml-0 lg:mr-0">MySQL</p>
                             </div>
@@ -234,20 +278,31 @@
         </section>
 
 
-        <section id="myWork" class="py-20 grid h-max scroll-mt-0">
-            <h1 class="text-center font-bold text-5xl mt-12 h-min inline text-primaryColor language-text" data-sk='MOJA PRÁCA' data-en='MY WORK'></h1>
+        <section id="myWork" class="grid h-max scroll-mt-20">
+            <h1 class="text-center font-bold text-5xl h-min inline text-primaryColor language-text" data-sk='MOJA PRÁCA' data-en='MY WORK'></h1>
             <article class="flex-wrap flex grid-cols-2 gap-8 place-content-center py-32 mx-auto w-11/12 2xl:w-8/12 3xl:w-7/12" >
-                <div class="mx-auto grid max-w-lg py-20 min-w-1/2 border-b-2">
+
+                <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2 border-b-2">
                     <img src="img/web02.png" alt="">
                     <div class="w-10/12 mx-auto text-primaryColor z-20 ">
-                        <h2 class="font-bold text-xl pb-8" >Portfolio</h2>
+                        <h2 class="font-bold text-xl pb-8 language-text" data-sk='Portfolio' data-en='Personal Portfolio website'></h2>
                         <p class="language-text" 
-                            data-sk='Fungujúca web stránka, ktorá slúži, ako prezentácia kozmetického štúdia. Jeden z prvých projektov, ktorý som robil podla predstav klienta.' 
+                            data-sk='Moja osobná portfólio stránka, vytvorená s Tailwindom a Vanilla JS/jQuery, práca s gridom/flexom a responzívnym dizajnom.' 
                             data-en="A working website that serves as a presentation of a cosmetic studio. One of the first projects I did according to the client's ideas.">
                         </p>
                     </div>
+                    <div class="mx-auto py-8 gap-20 text-primaryColor text-xl inline-flex">
+                        <a href="" class="inline-block">
+                            <i class="fa-solid fa-link"></i>
+                            <p class="language-text inline" data-sk='Odkaz' data-en='Link'></p>
+                        </a>
+                        <a href="" class="inline-block">
+                            <i class="fa-brands fa-github"></i>
+                            <p class="language-text inline" data-sk='Kód' data-en='Code'></p>
+                        </a>
+                    </div>
                 </div>
-                <div class="mx-auto grid max-w-lg py-20 min-w-1/2 border-b-2">
+                <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2 border-b-2">
                     <img src="img/web02.png" alt="">
                     <div class="w-10/12 mx-auto text-primaryColor z-20 ">
                         <h2 class="font-bold text-xl pb-8" >Vals studio</h2>
@@ -256,18 +311,38 @@
                             data-en="A working website that serves as a presentation of a cosmetic studio. One of the first projects I did according to the client's ideas.">
                         </p>
                     </div>
+                    <div class="mx-auto py-8 gap-20 text-primaryColor text-xl inline-flex">
+                        <a href="" class="inline-block">
+                            <i class="fa-solid fa-link"></i>
+                            <p class="language-text inline" data-sk='Odkaz' data-en='Link'></p>
+                        </a>
+                        <a href="" class="inline-block">
+                            <i class="fa-brands fa-github"></i>
+                            <p class="language-text inline" data-sk='Kód' data-en='Code'></p>
+                        </a>
+                    </div>
                 </div>
-                <div class="mx-auto grid max-w-lg py-20 w-10/12 border-b-2">
+                <div class="mx-auto grid max-w-lg w-11/12 sm:w-10/12 border-b-2 lg:border-b-0">
                     <img class="w-52 mx-auto" src="img/web03.png" alt="">
                     <div class="w-10/12 mx-auto text-primaryColor z-20 ">
-                        <h2 class="font-bold text-xl pb-8" >Appka na pocasie</h2>
+                        <h2 class="font-bold text-xl pb-8 language-text" data-sk='Aplikácia na počasie' data-en='Frameworks'></h2>
                         <p class="language-text" 
                             data-sk='Aplikácia na počasie vytvorená pomocou VUE.js s API volanim.' 
                             data-en="A working website that serves as a presentation of a cosmetic studio. One of the first projects I did according to the client's ideas.">
                         </p>
                     </div>
+                    <div class="mx-auto py-8 gap-20 text-primaryColor text-xl inline-flex">
+                        <a href="" class="inline-block">
+                            <i class="fa-solid fa-link"></i>
+                            <p class="language-text inline" data-sk='Odkaz' data-en='Link'></p>
+                        </a>
+                        <a href="" class="inline-block">
+                            <i class="fa-brands fa-github"></i>
+                            <p class="language-text inline" data-sk='Kód' data-en='Code'></p>
+                        </a>
+                    </div>
                 </div>
-                <div class="mx-auto grid max-w-lg py-20 min-w-1/2 border-b-2">
+                <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2">
                     <img src="img/web02.png" alt="">
                     <div class="w-10/12 mx-auto text-primaryColor z-20 ">
                         <h2 class="font-bold text-xl pb-8">Vals studio</h2>
@@ -276,23 +351,31 @@
                             data-en="A working website that serves as a presentation of a cosmetic studio. One of the first projects I did according to the client's ideas.">
                         </p>
                     </div>
+                    <div class="mx-auto py-8 gap-20 text-primaryColor text-xl inline-flex">
+                        <a href="" class="inline-block">
+                            <i class="fa-solid fa-link"></i>
+                            <p class="language-text inline" data-sk='Odkaz' data-en='Link'></p>
+                        </a>
+                        <a href="" class="inline-block">
+                            <i class="fa-brands fa-github"></i>
+                            <p class="language-text inline" data-sk='Kód' data-en='Code'></p>
+                        </a>
+                    </div>
                 </div>
             </article>
+        </section>
 
             
             
             
-        </section>
-        <!--<div id="two" class="parallax-layer2 ">
-        </div>-->
-        <section id="contact" class=" min-h-screen mb-10 scroll-mt-8">
+        <section id="contact" class=" min-h-screen mb-10 scroll-mt-9 lg:scroll-mt-20">
             <h1 class="mb-4 text-5xl tracking-tight font-bold text-center text-primaryColor language-text" data-sk='KONTAKT' data-en='CONTACT'></h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl language-text" 
+            <p class="mb-8 lg:mb-16 font-light text-center text-primaryColor sm:text-xl language-text" 
                 data-sk='Ak som vás zaujal prosím kontaktujte ma.' 
                 data-en='If I have interested you, please contact me.'>
             </p>
-            <div class="flex-wrap flex grid-cols-2 place-content-center py-32 mx-auto w-11/12 2xl:w-8/12 3xl:w-7/12">
-                <div class=" inline-block w-11/12 md:w-6/12 mt-14 mx-auto md:mx-0">
+            <div class="flex-wrap flex grid-cols-2 place-content-center gap-40 py-32 mx-auto w-11/12 2xl:w-8/12 3xl:w-7/12">
+                <div class=" inline-block w-8/12 md:w-80 xl:w-96 my-auto mx-auto md:mx-0">
                         <img src="img/person.png" class="" alt="">
                 </div>
                 <div class="py-8 lg:py-16  inline-block  max-w-screen-md  md:mx-1 w-11/12 md:w-96">
@@ -315,11 +398,11 @@
             </div>
             <div class="wrapper flex  mx-auto place-content-center ">
                 <ul class="">
-                    <li class="linkedin"><a href="https://www.linkedin.com/in/peter-trebaticky/"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-                    <li class="github"><a href="https://github.com/Peter-Trebaticky"><i class="fa-brands fa-github fa-2x"></i></a></li>
-                    <li class="facebook"><a href="https://www.facebook.com/peter.trebaticky/"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-                    <li class="email"><a href="mailto:trebatickysk@gmail.com"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
-                    <li class="phone"><a href="tel:+421918885987"><i class="fa-solid fa-phone fa-2x"></i></a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/in/peter-trebaticky/"><i class="fa-brands fa-linkedin fa-2x pt-4"></i></a></li>
+                    <li class="github"><a href="https://github.com/Peter-Trebaticky"><i class="fa-brands fa-github fa-2x pt-4"></i></a></li>
+                    <li class="facebook"><a href="https://www.facebook.com/peter.trebaticky/"><i class="fa-brands fa-facebook fa-2x pt-4"></i></a></li>
+                    <li class="email"><a href="mailto:trebatickysk@gmail.com"><i class="fa-solid fa-envelope fa-2x pt-4"></i></a></li>
+                    <li class="phone"><a href="tel:+421918885987"><i class="fa-solid fa-phone fa-2x pt-4"></i></a></li>
                 </ul>
             </div>
         </section>

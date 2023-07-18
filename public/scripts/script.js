@@ -29,9 +29,9 @@ function changeLanguage() {
 }
 
 // refresh 
-//window.addEventListener("load", function () {
-//  document.documentElement.scrollTop = document.body.scrollTop = document.getElementById("home").offsetTop;
-//});
+window.addEventListener("load", function () {
+ document.documentElement.scrollTop = document.body.scrollTop = document.getElementById("home").offsetTop;
+});
 
 // back to top
 let mybutton = document.getElementById("btn-back-to-top");
