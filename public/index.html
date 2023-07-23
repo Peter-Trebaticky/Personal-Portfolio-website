@@ -284,7 +284,7 @@
 
                 <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2 border-b-2">
                     <img src="img/web01.png" alt="">
-                    <div class="w-10/12 mx-auto text-primaryColor z-20 ">
+                    <div class="w-10/12 mt-3 mx-auto text-primaryColor z-20 ">
                         <h2 class="font-bold text-xl pb-8 language-text" data-sk='Portfolio' data-en='Personal Portfolio website'></h2>
                         <p class="language-text" 
                             data-sk='Moja osobná portfólio stránka, vytvorená s Tailwindom a Vanilla JS/jQuery, práca s gridom/flexom a responzívnym dizajnom.' 
@@ -304,7 +304,7 @@
                 </div>
                 <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2 border-b-2">
                     <img src="img/web02.png" alt="">
-                    <div class="w-10/12 mx-auto text-primaryColor z-20 ">
+                    <div class="w-10/12 mt-3 mx-auto text-primaryColor z-20 ">
                         <h2 class="font-bold text-xl pb-8" >Vals studio</h2>
                         <p class="language-text" 
                             data-sk='Fungujúca web stránka, ktorá slúži, ako prezentácia kozmetického štúdia. Jeden z prvých projektov, ktorý som robil podla predstav klienta.' 
@@ -323,7 +323,7 @@
                     </div>
                 </div>
                 <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2 border-b-2 lg:border-b-0 min-[2416px]:border-b-2">
-                    <img class="w-60 mx-auto" src="img/web03.png" alt="">
+                    <img src="img/web03.png" alt="">
                     <div class="w-10/12 mx-auto text-primaryColor z-20 ">
                         <h2 class="font-bold text-xl pb-8 language-text" data-sk='Aplikácia na počasie' data-en='Frameworks'></h2>
                         <p class="language-text" 
@@ -332,7 +332,7 @@
                         </p>
                     </div>
                     <div class="mx-auto py-8 gap-20 text-primaryColor text-xl inline-flex">
-                        <a href="" class="inline-block">
+                        <a href="https://pt-weatherapp.000webhostapp.com/" class="inline-block">
                             <i class="fa-solid fa-link"></i>
                             <p class="language-text inline" data-sk='Odkaz' data-en='Link'></p>
                         </a>
@@ -343,9 +343,9 @@
                     </div>
                 </div>
                 <div class="mx-auto grid max-w-lg w-11/12 sm:min-w-1/2">
-                    <img src="img/web02.png" alt="">
-                    <div class="w-10/12 mx-auto text-primaryColor z-20 ">
-                        <h2 class="font-bold text-xl pb-8">Vals studio</h2>
+                    <img src="img/web04.png" alt="">
+                    <div class="w-10/12 mt-3 mx-auto text-primaryColor z-20 ">
+                        <h2 class="font-bold text-xl pb-8">Trubka s.r.o.</h2>
                         <p class="language-text"
                             data-sk='Fungujúca web stránka, ktorá slúži, ako prezentácia kozmetického štúdia. Jeden z prvých projektov, ktorý som robil podla predstav klienta.'
                             data-en="A working website that serves as a presentation of a cosmetic studio. One of the first projects I did according to the client's ideas.">
@@ -356,12 +356,12 @@
                             <i class="fa-solid fa-link"></i>
                             <p class="language-text inline" data-sk='Odkaz' data-en='Link'></p>
                         </a>
-                        <a href="" class="inline-block">
+                        <a href="https://github.com/Peter-Trebaticky/Trubka" class="inline-block">
                             <i class="fa-brands fa-github"></i>
                             <p class="language-text inline" data-sk='Kód' data-en='Code'></p>
                         </a>
                     </div>
-                </div>
+                </div>        
             </article>
         </section>
 
@@ -379,18 +379,18 @@
                         <img src="img/person.png" class="" alt="">
                 </div>
                 <div class="py-8 lg:py-16  inline-block  max-w-screen-md  md:mx-1 w-11/12 md:w-96">
-                    <form action="#" class="space-y-8">
+                    <form action="scripts/mail.php" method="post" class="space-y-8">
                         <div>
                             <label for="subject" class="block mb-2 text-sm font-medium text-primaryColor language-text" data-sk='Meno' data-en='Name'></label>
-                            <input type="text" id="subject" class="shadow-sm bg-gray-50 border border-primaryColor text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"  required>
+                            <input type="text" id="subject" name="subject" class="shadow-sm bg-gray-50 border border-primaryColor text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
                         </div>
                         <div>
                             <label for="email" class="block mb-2 text-sm font-medium text-primaryColor">Email</label>
-                            <input type="email" id="email" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-primaryColor shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
+                            <input type="email" id="email" name="email" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-primaryColor shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" required>
                         </div>
                         <div class="sm:col-span-2">
                             <label for="message" class="block mb-2 text-sm font-medium text-primaryColor language-text" data-sk='Správa' data-en='Message'></label>
-                            <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-primaryColor focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
+                            <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-primaryColor focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
                         </div>
                         <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-red-800 sm:w-fit hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 language-text" data-sk='ODOSLAŤ' data-en='SEND'></button>
                     </form>
