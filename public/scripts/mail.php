@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $to = "trebatickysk@gmail.com"; 
   $subject = $_POST["subject"]; 
@@ -9,11 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $headers .= "Reply-To: $email" . "\r\n"; 
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
+  if (mail($to, $subject, $message, $headers)) {
+    $_SESSION["mailStatus"] = "success";
+  } else {
+    $_SESSION["mailStatus"] = "error";
+  }
 
-  mail($to, $subject, $message, $headers);
-
-
-//  header("Location: mail.html");
-//  exit();
+  header("Location: ../index.html?mailStatus=" . $_SESSION["mailStatus"]);
+  exit();
 }
 ?>

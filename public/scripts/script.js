@@ -29,9 +29,9 @@ function changeLanguage() {
 }
 
 // refresh 
-//window.addEventListener("load", function () {
-// document.documentElement.scrollTop = document.body.scrollTop = document.getElementById("home").offsetTop;
-//});
+window.addEventListener("load", function () {
+ document.documentElement.scrollTop = document.body.scrollTop = document.getElementById("home").offsetTop;
+});
 
 // back to top
 let mybutton = document.getElementById("btn-back-to-top");
@@ -66,6 +66,15 @@ function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
 }
 
+
+/*nav-panel background scroll*/
+window.addEventListener("scroll", function () {
+  var scrollOffset = window.scrollY;
+  var navigacia = document.querySelector(".nav-panel");
+  navigacia.style.backgroundPositionY = -scrollOffset + "px";
+});
+
+
 //water effect
 $(document).ready(function () {
   function checkScreenSize() {
@@ -73,8 +82,8 @@ $(document).ready(function () {
       $(".water").ripples("destroy");
     } else {
       $(".water").ripples({
-        resolution: 1400,
-        perturbance: 0.040,
+        resolution: 1500,
+        perturbance: 0.004,
       });
     }
   }
@@ -82,9 +91,6 @@ $(document).ready(function () {
 
   $(window).resize(checkScreenSize); 
 });
-
-//parallax effect
-
 
 //progress bar
 function fillProgressBar(progressBar) {
@@ -106,5 +112,25 @@ function handleScroll() {
     }
   });
 }
-
 window.addEventListener("scroll", handleScroll);
+
+
+/*modal-email*/
+function getQueryParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const mailStatus = getQueryParam("mailStatus");
+  if (mailStatus === "success") {
+    var modal = document.getElementById("myModal");
+
+    modal.style.display = "block";
+
+    setTimeout(function () {
+      modal.style.display = "none";
+    }, 3000);
+  }
+});
+
+

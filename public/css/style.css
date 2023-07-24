@@ -636,10 +636,6 @@ video {
   margin: 0.875rem;
 }
 
-.m-4 {
-  margin: 1rem;
-}
-
 .m-6 {
   margin: 1.5rem;
 }
@@ -776,6 +772,10 @@ video {
   height: 3rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -910,6 +910,10 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.place-self-center {
+  place-self: center;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }
@@ -960,6 +964,11 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
 .bg-red-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
@@ -1002,6 +1011,11 @@ video {
   padding-bottom: 8rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1018,6 +1032,10 @@ video {
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pb-8 {
@@ -1254,14 +1272,21 @@ h1{
   display: block;
 }
 
-/* Position and style the close button (top right corner) */
-
 .nav-panel{
+  background-position: center top;
+  background-size:  auto;
+  background-image: url('../img/water.jpg');
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+}
+
+.full-landing-image {
   width: 100%;
-  background-size:auto ;
-  background-image: url('') ;
-  background-repeat: repeat-y;
-  background-attachment: scroll;
+  background-image: url('../img/water.jpg');
+  background-size: auto ;
+  background-repeat: no-repeat;
+  background-position: center top;
   top: 0;
   left: 0;
 }
@@ -1347,48 +1372,6 @@ h1{
             clip-path: polygon(0% 100%, 100% 100%, 100% 0, 86% 0, 71% 0, 55% 0, 34% 0, 18% 0, 0 0);
   }
 }
-
-/*water/parallax effect*/
-
-.full-landing-image{
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/water.jpg') ;
-  background-size: cover;
-  top: 0;
-  left: 0;
-}
-
-.parallax-container {
-  position: relative;
-  height: 100vh;
-}
-
-.parallax-layer1 {
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: left;
-  background-image: url("../img/bubbles1.png");
-  opacity: 0.3;
-}
-
-.parallax-layer2 {
-  top: 0;
-  right: 0;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: right;
-  background-image: url("../img/bubbles.png");
-  opacity: 0.3;
-}
-
-/*
-
-
-
-*/
 
 .container{
   max-width: 450px;
@@ -1529,6 +1512,60 @@ h1{
 .link-underline:hover {
   background-size: 100% 3px;
   background-position: 0 100%
+}
+
+/*modal-email*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 60;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+
+.modal-content {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 15%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 /* media queries */
@@ -1802,6 +1839,10 @@ h1{
     height: 480px;
   }
 
+  .lg\:w-8\/12 {
+    width: 66.666667%;
+  }
+
   .lg\:w-9\/12 {
     width: 75%;
   }
@@ -1844,6 +1885,14 @@ h1{
     padding-bottom: 0px;
   }
 
+  .lg\:pb-24 {
+    padding-bottom: 6rem;
+  }
+
+  .lg\:pb-32 {
+    padding-bottom: 8rem;
+  }
+
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -1875,7 +1924,6 @@ h1{
     border-bottom-width: 2px;
   }
 }
-
 
 
 
