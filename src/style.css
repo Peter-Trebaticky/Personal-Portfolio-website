@@ -84,23 +84,22 @@ h1{
 
 
 .nav-panel{
-    background-position: center top;
+    background-position: left top;
     background-size:  auto;
     background-image: url('../img/water.jpg');
     background-repeat: no-repeat;
     top: 0;
-    left: 0;
-
-    
+    left: 0;    
 }
 .full-landing-image {
     width: 100%;
     background-image: url('../img/water.jpg');
     background-size: auto ;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: left top;
     top: 0;
     left: 0;
+    
 
 
 }
