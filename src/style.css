@@ -370,6 +370,9 @@ h1{
     .nav-panel{
         background-image: none;
     }
+    .full-landing-image{
+        background-size: cover;
+    }
 }
 @media screen and (max-width: 640px) {
     .wrapper {
