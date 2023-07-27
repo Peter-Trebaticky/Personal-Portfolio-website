@@ -74,24 +74,6 @@ window.addEventListener("scroll", function () {
   navigacia.style.backgroundPositionY = -scrollOffset + "px";
 });
 
-
-//water effect
-$(document).ready(function () {
-  function checkScreenSize() {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      $(".water").ripples("destroy");
-    } else {
-      $(".water").ripples({
-        resolution: 1500,
-        perturbance: 0.004,
-      });
-    }
-  }
- checkScreenSize();
-
-  $(window).resize(checkScreenSize); 
-});
-
 //progress bar
 function fillProgressBar(progressBar) {
   var progressFill = progressBar.querySelector(".progress");

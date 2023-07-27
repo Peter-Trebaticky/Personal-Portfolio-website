@@ -6,10 +6,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat Alternates', sans-serif ;
-    
-
 }
-
 .topnav {
     overflow: hidden;
 }
@@ -25,6 +22,7 @@ body {
 .topnav a:hover {
     background-color: #932e3e;
 }
+/**/
 
 .image-button {
   width: 60px;
@@ -36,9 +34,6 @@ body {
   border: 2px #000;
   cursor: pointer;
 }
-
-
-
 .image-button.clicked {
   background-image: url('../img/slovak-image.png');
 }
@@ -58,9 +53,6 @@ h1{
 .per-photo{
     height: 600px;
 }
-
-
-
 /* The sidepanel menu */
 .sidepanel {
     width: 0;
@@ -81,8 +73,6 @@ h1{
     display: block;
     
 }
-
-
 .nav-panel{
     background-position: left top;
     background-size:  auto;
@@ -91,7 +81,7 @@ h1{
     top: 0;
     left: 0;    
 }
-.full-landing-image {
+.water{
     width: 100%;
     background-image: url('../img/water.jpg');
     background-size: auto ;
@@ -99,9 +89,6 @@ h1{
     background-position: left top;
     top: 0;
     left: 0;
-    
-
-
 }
 .fadeelement{
     z-index: 0
@@ -109,8 +96,8 @@ h1{
 .sidepanel .closebtn {
     top: 0;
     right: 16px;
-
 }
+
 
 /*water button*/
 .water-button {
@@ -151,10 +138,6 @@ h1{
     90% {clip-path: polygon(0% 100%, 100% 100%, 100% 5%, 86% 10%, 73% 10%, 55% 6%, 33% 3%, 15% 5%, 0 9%);}    
     100% {clip-path: polygon(0% 100%, 100% 100%, 100% 0, 86% 0, 71% 0, 55% 0, 34% 0, 18% 0, 0 0);}
 }
-
-
-
-
 .container{
     max-width: 450px;
 }
@@ -393,14 +376,10 @@ h1{
         width: 100%;
     }
 
-    .progress-bar svg {
+    svg {
         width: 48px;
         height: 48px;
         margin-right: 8px;
       justify-content: flex-end;
     }
 }
-
-
-
-
