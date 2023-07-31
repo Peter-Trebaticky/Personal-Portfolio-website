@@ -1108,14 +1108,6 @@ video {
   font-weight: 500;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
-.leading-tight {
-  line-height: 1.25;
-}
-
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -1600,7 +1592,6 @@ h1{
   svg {
     width: 48px;
     height: 48px;
-    margin-right: 8px;
     justify-content: flex-end;
   }
 }
