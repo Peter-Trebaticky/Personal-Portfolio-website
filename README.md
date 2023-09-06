@@ -1,5 +1,5 @@
-# Portfolio
+# Personal Portfolio website
 
 # https://trebas.eu/
 
-My personal Portfolio website 
+My presentation website with portfolio and info about me with contacs.
