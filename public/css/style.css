@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,6 +191,10 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -338,6 +342,14 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
   padding: 0;
 }
 
@@ -660,6 +672,11 @@ video {
   margin-bottom: auto;
 }
 
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -794,6 +811,10 @@ video {
   height: min-content;
 }
 
+.h-3 {
+  height: 0.75rem;
+}
+
 .max-h-min {
   max-height: -moz-min-content;
   max-height: min-content;
@@ -821,6 +842,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .max-w-lg {
@@ -1620,6 +1645,10 @@ h1{
 .hover\:text-cyan-950:hover {
   --tw-text-opacity: 1;
   color: rgb(8 51 68 / var(--tw-text-opacity));
+}
+
+.hover\:text-\[rgba\(0\2c 0\2c 0\2c 1\.0\)\]:hover {
+  color: rgba(0,0,0,1.0);
 }
 
 .hover\:opacity-100:hover {
