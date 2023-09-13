@@ -164,7 +164,9 @@ h1{
     z-index: -1;
     transition: width 1s ease-in-out;
 }
-
+#prog-hob {
+    background-color: rgb(209 213 219);
+}
 
 /*scoial icons*/
 
