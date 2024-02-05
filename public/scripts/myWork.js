@@ -26,8 +26,8 @@ const projects = [
     title: "Notes app",
     descriptionSK: "Responzívna aplikácia na poznámky inšpirovaná Google keep vytvorená vo Vue 3, TypeScript, Vite, Pinia a štylovaná pomocou Tailwind CSS.",
     descriptionEN: "Responsive notes app inspired by Google keep built in Vue 3, TypeScript, Vite, Pinia and styled with Tailwind CSS.",
-    linkURL: "https://github.com/Peter-Trebaticky/Note-app",
-    codeURL: "https://peter-trebaticky.github.io/Note-app/",
+    linkURL: "https://peter-trebaticky.github.io/Note-app/",
+    codeURL: "https://github.com/Peter-Trebaticky/Note-app",
     borderClass: "border-b-2",
   },
   //weather app
