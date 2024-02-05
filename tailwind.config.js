@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./public/index.html",
     "./public/scripts/script.js",
+    "./public/scripts/myWork.js",
     "./public/scripts/mail.php",
   ],
   theme: {

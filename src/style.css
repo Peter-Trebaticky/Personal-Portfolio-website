@@ -83,9 +83,9 @@ h1{
 }
 .water{
     width: 100%;
-    background-image: url('../img/water.jpg');
+    background-image: url('../img/water.jpg'), url('../img/water-flipped.jpg');
     background-size: auto ;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat, repeat-y;
     background-position: left top;
     top: 0;
     left: 0;
